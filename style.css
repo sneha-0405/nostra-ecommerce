@@ -1,0 +1,109 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+.offer,.footer,.sidebar{
+    background-color: rgb(17, 17, 27);
+    color: white;
+}
+
+.dark-image{
+    filter: brightness(50%);
+}
+
+.dark-image-collections{
+    filter: brightness(75%);
+}
+
+.scroll-container img{
+    padding: 10px;
+}
+
+.scroll-container {
+    scroll-behavior: smooth;
+    scrollbar-width: thin; /* For Firefox */
+}
+
+.dark-image__s2{
+    filter: brightness(70%);
+}
+
+.limtedOffer {
+    background-color: rgb(17, 17, 27);
+    width:100%;
+    padding: 20px;
+    border-radius: 10px;
+    
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px; /* Add padding to create space around the content */
+}
+
+.limtedOffer img {
+    margin-left: 0; /* Remove the left margin */
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.limited-offer {
+    background-color: rgb(17, 17, 27);
+    width:100%;
+    padding: 20px;
+    border-radius: 10px;
+    
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    padding: 20px; /* Add padding to create space around the content */
+}
+
+.subcription input{
+    width: 80%;
+    border: solid 3px black;
+}
+.contact-container{
+    background-color: rgb(17, 17, 27);
+    width: 100%;
+
+}
+
+.scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        grid-template-columns: 4fr 1fr 1fr; /* Restore desktop layout */
+    }
+}
+
+.collections-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 10px;
+    text-align: center;
+}
+
+.collections-container img{
+    display: inline;
+}
+
+@media (min-width: 640px) { /* Medium screens (sm) */
+    .collections-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) { /* Large screens (lg) */
+    .collections-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

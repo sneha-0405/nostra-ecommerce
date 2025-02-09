@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="popup_offer">
+        <div class="flex justify-evenly p-2 offer place-items-center">
+            <h2 class="text-sm md:text-xl">Sign Up and <strong>get 20% OFF</strong> for you first Order</h2>
+            <i class="fa-solid fa-x cursor-pointer" style="color: #ffffff;" id="close" onclick="Closefunction()"></i>
+        </div>
+    </section>
+
+    <!--Navigation Bar-->
+    <section class="p-4 flex flex-wrap justify-between items-center bg-white sticky top-0 z-10 shadow-md">
+        <h2 class="text-3xl font-bold">Nostra</h2>
+        <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+            class="w-6 h-6 md:hidden cursor-pointer">
+            <path fill-rule="evenodd"
+                d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd" />
+        </svg>
+        <!-- Sidebar Menu -->
+        <div id="sidebar"
+            class=" sidebar fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform -translate-x-full transition-transform duration-300 md:hidden">
+
+            <!-- Close Button (×) -->
+            <button id="close-btn" class="absolute top-4 right-4 text-2xl">&times;</button>
+
+            <ul class="flex flex-col items-start text-lg font-medium gap-5 p-6">
+                <a href="index.html">
+                    <li class="hover:underline">Home</li>
+                </a>
+                <a href="#NewArrivals">
+                    <li class="hover:underline">New Arrival</li>
+                </a>
+                <a href="#MostWanted">
+                    <li class="hover:underline">Most Wanted</li>
+                </a>
+                <a href="collections.html">
+                    <li class="hover:underline">Collections</li>
+                </a>
+                <a href="contact.html">
+                    <li class="hover:underline">Contact Us</li>
+                </a>
+            </ul>
+        </div>
+
+
+
+        <!--Destop screens..-->
+        <ul class="md:flex  text-lg font-medium gap-5 p-2 hidden">
+            <a href="index.html">
+                <li class="hover:underline">Home</li>
+            </a>
+            <a href="index.html#NewArrival">
+                <li class="hover:underline">New Arrival</li>
+            </a>
+            <a href="index.html#MostWanted">
+                <li class="hover:underline">Most Wanted</li>
+            </a>
+            <a href="collections.html">
+                <li class="hover:underline">Collections</li>
+            </a>
+            <a href="contact.html">
+                <li class="hover:underline">Contact Us</li>
+            </a>
+        </ul>
+    </section>
+
+    <!--Search bar-->
+    <section class="mt-5 border border-black focus:outline-none p-2 flex items-center mx-3 w-10/12 rounded-md md:w-3/4">
+        <input type="text" class="focus:outline-none w-full" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass p-1" style="color: #161718;"></i>
+    </section>
+
+    <section class="p-4 m-2 main-container">
+        <div class="collections-container grid grid-cols-2">
+            <div>
+                <img src="./images/f1.jpg" alt="summer shirts" height="250" width="250" class="image blue dark-image-collections rounded-sm">
+                <h2 class="text-2xl font-bold">Floral Summer Shirt</h2>
+                <p class="text-sm font-medium">₹220</p>
+            </div>
+
+            <div>
+                <img src="./images/C-blue.jpg" alt="summer shirts" height="250" width="250" class="image blue dark-image-collections rounded-sm">
+                <h2 class="text-2xl font-bold">Beach Shirt</h2>
+                <p class="text-sm font-medium">₹570</p>
+            </div>
+
+            <div>
+                <img src="./images/C-g.jpg" alt="summer shirts" height="250" width="250" class="image green dark-image-collections rounded-sm">
+                <h2 class="text-2xl font-bold">Summer Green</h2>
+                <p class="text-sm font-medium">₹220</p>
+            </div>
+
+            <div>
+                <img src="./images/C-r.jpg" alt="summer shirts" height="250" width="250" class="mt-2 image red dark-image-collections" >
+                <h2 class="text-2xl font-bold">Party Floral Shirt</h2>
+                <p class="text-sm font-medium">₹390</p>
+            </div>
+
+            <div>
+                <img src="./images/C-red.jpg" alt="summer shirts" height="250" width="250" class="mt-2 image red dark-image-collections">
+                <h2 class="text-2xl font-bold">Shirt Party Red</h2>
+                <p class="text-sm font-medium">₹599</p>
+            </div>
+
+            <div>
+                <img src="./images/C-white-beach.jpg" alt="summer shirts" height="250" width="250" class="mt-2 image red dark-image-collections rounded-sm">
+                <h2 class="text-2xl font-bold">Floral Summer Shirt</h2>
+                <p class="text-sm font-medium">₹430</p>
+            </div>
+
+            <div>
+                <img src="./images/f1.jpg" alt="summer shirts" height="250" width="250" class="mt-2 image blue dark-image-collections rounded-sm">
+                <h2 class="text-2xl font-bold">Floral Summer Shirt</h2>
+                <p class="text-sm font-medium">₹220</p>
+            </div>
+
+            <div>
+                <img src="./images/C-g.jpg" alt="summer shirts" height="250" width="250" class="mt-2 image green dark-image-collections rounded-sm">
+                <h2 class="text-2xl font-bold">Summer Green</h2>
+                <p class="text-sm font-medium">₹220</p>
+            </div>
+
+            <div>
+                <img src="./images/C-red.jpg" alt="summer shirts" height="250" width="250" class="mt-2 image red dark-image-collections rounded-sm">
+                <h2 class="text-2xl font-bold">Shirt Party Red</h2>
+                <p class="text-sm font-medium">₹390</p>
+            </div>
+        </div>
+
+        <div class="border-l-4 border-black mx-32 hidden lg:flex"></div>
+
+        <div class="choices flex gap-4 md:block">
+            <div class="p-2 m-1">
+                <h2 class="text-4xl font-bold">Occasion</h2><br>
+                <label for="" class="text-2xl p-3"><input type="checkbox" value="blue" class="filter-checkbox"> Summer</label><br>
+                <label for="" class="text-2xl p-3"><input type="checkbox" value="red" class="filter-checkbox"> Party</label><br>
+                <label for="" class="text-2xl p-3"><input type="checkbox" value="blue" class="filter-checkbox"> Beach</label>
+            </div>
+            <br>
+            <div class="p-2 m-1">
+                <h2 class="text-4xl font-bold">Colors</h2><br>
+                <label for="" class="text-2xl p-3"><input type="checkbox" value="red" class="filter-checkbox"> Red</label><br>
+                <label for="" class="text-2xl p-3"><input type="checkbox" value="blue" class="filter-checkbox"> Blue</label><br>
+                <label for="" class="text-2xl p-3"><input type="checkbox" value="green" class="filter-checkbox"> Green</label>
+            </div>
+        </div>
+    </section>
+
+
+    <!--New Letter Subcription-->
+    <section class="text-center subcription">
+        <h2 class="text-2xl font-bold md:text-4xl">Join our News Letter</h2>
+        <p class="font-medium text-xl md:text-3xl mt-3">Signup for our email newspaper to get exclusive discounts,
+            updates, and more</p>
+        <input type="text" class="border border-black p-3 mt-5">
+        <br>
+        <button class="mt-5 border bg-black text-white w-24 p-2 rounded underline">Subscribe</button>
+        </div>
+    </section>
+
+    <!--footer-->
+    <section class="footer p-10 mt-4">
+        <h1 class="text-xl font-medium md:text-3xl">Nostra</h1>
+        <p class="font-medium text-sm mt-4 md:text-xl">The Standard chunk of Lorem ipsum used since the 1500s is
+            reprodused below for those interest</p>
+        <div class="flex justify-start gap-14 mt-4">
+            <i class="fa-brands fa-instagram" style="color: #f4f5f6;"></i>
+            <i class="fa-brands fa-twitter" style="color: #e7eaee;"></i>
+            <i class="fa-brands fa-facebook" style="color: #ededee;"></i>
+        </div>
+        <p class="pt-2 mt-2 md:text-xl">@copy 2023 nostra.com</p>
+    </section>
+</body>
+</html>
+
+
+<script>
+    var offer = document.querySelector(".popup_offer")
+    var close = document.getElementById("close")
+
+    function Closefunction() {
+        offer.style.display = "none"
+    }
+
+
+    //menu, side-bar code.
+    // selecting all the hamburger menu, side bar and close btn.
+
+    const menuBtn = document.getElementById("menu-btn")
+    const sidebar = document.getElementById("sidebar")
+    const closeBtn = document.getElementById("close-btn")
+
+    menuBtn.addEventListener("click",function(){
+        sidebar.classList.remove("-translate-x-full")
+    })
+
+    closeBtn.addEventListener("click",function(){
+        sidebar.classList.add("-translate-x-full")
+    })
+
+    //selecting the image and the checkbox
+
+    var checkboxes = document.querySelectorAll(".filter-checkbox")
+    var productCards = document.querySelectorAll(".collections-container > div")
+
+    // looping each of the checkboxes
+    for(var i=0; i<checkboxes.length;i++){
+        checkboxes[i].addEventListener("change",function(){
+            var selectedCategories = []
+            for (var j=0; j<checkboxes.length;j++){
+                if(checkboxes[j].checked){
+                    selectedCategories.push(checkboxes[j].value)
+                }
+            }
+            if(selectedCategories.length===0){
+                for(var k=0; k<productCards.length;k++){
+                    productCards[k].style.display="block"
+                }
+                return
+            }
+            //Show Only Matching Images
+            for ( var k=0; k<productCards.length; k++){
+                let shouldShow = false
+                let productImage = productCards[k].querySelector("img"); 
+                for( let category of selectedCategories){
+                    if (productImage.classList.contains(category)) {
+                    shouldShow = true;
+                    break;
+                }
+            }
+            productCards[k].style.display = shouldShow ? "block" : "none"; 
+            }
+        })
+    }
+
+    
+</script>
